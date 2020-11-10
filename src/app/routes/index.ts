@@ -1,5 +1,14 @@
-// Import das rotas da aplicação
+import { Router } from 'express'
 
-const Routes = {}
+import Recipes from './Recipes'
 
+import Controllers from '../controllers'
+
+type RoutesProps = {
+  Recipes: Router
+}
+
+const Routes: RoutesProps = {
+  Recipes: Recipes(Router(), Controllers.Recipes)
+}
 export default Routes
