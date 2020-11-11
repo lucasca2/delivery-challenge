@@ -1,5 +1,5 @@
 # Delivery Much Challenge
-Essa API foi projetada com base em um desafio feito pela !["Delivery Much"](https://www.deliverymuch.com.br/) onde teria que desenvolver uma aplicação Node ou GO em conjunto com o Docker. No caso escolhi desenvolver com NodeJS pelo fato de eu ter mais experiência com a linguagem. 
+Essa API foi projetada com base em um desafio feito pela [Delivery Much](https://www.deliverymuch.com.br/) onde teria que desenvolver uma aplicação Node ou GO em conjunto com o Docker. No caso escolhi desenvolver com NodeJS pelo fato de eu ter mais experiência com a linguagem. 
 
 ## Iniciando
 Primeiramente, certifique-se de ter instalado em seu computador o NodeJS, Docker e o docker-compose.
@@ -12,7 +12,7 @@ git clone https://github.com/lucasca2/delivery-challenge.git
 ```
 
 #### Variáveis de ambiente
-Crie um arquivo .env e copie o conteúdo do arquivo .env.example, caso necessário substitua a chave da API do !["Giphy"](https://developers.giphy.com/) dentro do arquivo de configurações.
+Crie um arquivo .env e copie o conteúdo do arquivo .env.example, caso necessário substitua a chave da API do [Giphy](https://developers.giphy.com/) dentro do arquivo de configurações.
 Caso não queira fazer isso, poderá usar a chave fornecida no arquivo de exemplo.
 ```
 GIPHY_API_KEY={SUA_CHAVE}
