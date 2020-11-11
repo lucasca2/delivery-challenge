@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express, { Application } from 'express'
 import cors from 'cors'
 import routes from './routes'
+import bodyParser from 'body-parser'
 
 class App {
   public server: Application;
@@ -15,6 +16,7 @@ class App {
 
   private middlewares (): void {
     this.server.use(express.json())
+    this.server.use(bodyParser.json())
     this.server.use(cors())
   }
 
