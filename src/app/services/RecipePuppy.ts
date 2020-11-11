@@ -1,9 +1,9 @@
-import axios, { AxiosInstance, AxiosResponse } from 'axios'
+import axios, { AxiosInstance } from 'axios'
 
-type Recipe = {
+export type RecipePuppyType = {
   title: string;
   href: string;
-  igredients: string;
+  ingredients: string;
   thumbnail: string;
 }
 
@@ -11,7 +11,7 @@ type ResponseRecipePuppy = {
   title: string;
   version: string;
   href: string;
-  results: Recipe[];
+  results: RecipePuppyType[];
 }
 
 class RecipePuppy {
@@ -23,9 +23,15 @@ class RecipePuppy {
 
   public async getRecipes (igredients: any): Promise<ResponseRecipePuppy> {
     const i = igredients.join(',')
-    const { data } = await this.api.get<ResponseRecipePuppy>('/', { params: { i } })
 
-    return data
+    try {
+      const { data } = await this.api.get<ResponseRecipePuppy>('/', { params: { i } })
+
+      return data
+    } catch (e) {
+      const err = { error: `Error in RecipePuppy: ${e.message}` }
+      throw err
+    }
   }
 }
 

@@ -12,10 +12,15 @@ class Giphy {
     })
   }
 
-  public async getGif (query: string): Promise<any> {
-    const { data } = await this.api.get<any>('/', { params: { q: query } })
+  public async getOneGif (query: string): Promise<any> {
+    try {
+      const { data: gifs } = await this.api.get<any>('/gifs/search', { params: { q: query } })
 
-    return data
+      return gifs?.data?.[0]?.images?.original?.url
+    } catch (e) {
+      const err = { error: `Error in Giphy: ${e.message}` }
+      throw err
+    }
   }
 }
 
