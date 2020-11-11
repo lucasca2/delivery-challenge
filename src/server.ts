@@ -1,5 +1,5 @@
 import app from './app'
 
-app.listen(process.env.PORT, () => {
-  console.log(`API iniciada (PORTA:${process.env.PORT})`)
+app.listen(3000, () => {
+  console.log('API iniciada (PORTA:3000)')
 })
