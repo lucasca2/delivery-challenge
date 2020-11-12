@@ -62,7 +62,15 @@ Resposta Exemplo:
     ]
 }
 ```
----
+## Testes
+Para executar os testes da aplicação
+```
+npm run test
+```
+ou
+```
+yarn test
+```
 
 
 
