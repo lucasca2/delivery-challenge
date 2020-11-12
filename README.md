@@ -2,7 +2,7 @@
 Essa API foi projetada com base em um desafio feito pela [Delivery Much](https://www.deliverymuch.com.br/) onde teria que desenvolver uma aplicação Node ou GO em conjunto com o Docker. No caso escolhi desenvolver com NodeJS pelo fato de eu ter mais experiência com a linguagem. 
 
 ## Iniciando
-Primeiramente, certifique-se de ter instalado em seu computador o NodeJS, Docker e o docker-compose.
+Primeiramente, certifique-se de ter instalado em seu computador o [Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git), [NodeJS](https://nodejs.org/en/download/), [Docker](https://www.docker.com/products/docker-desktop) e o [docker-compose](https://docs.docker.com/compose/install/).
 
 #### Clone o projeto
 
