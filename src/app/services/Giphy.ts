@@ -12,9 +12,9 @@ class Giphy {
     })
   }
 
-  public async getOneGif (query: string): Promise<any> {
+  public async getOneGif (query: string): Promise<string> {
     try {
-      const { data: gifs } = await this.api.get<any>('/gifs/search', { params: { q: query } })
+      const { data: gifs } = await this.api.get('/gifs/search', { params: { q: query } })
 
       return gifs?.data?.[0]?.images?.original?.url
     } catch (e) {
